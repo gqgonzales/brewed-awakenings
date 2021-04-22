@@ -44,9 +44,9 @@ export const Orders = () => {
     //     order.timestamp
     //   ).toLocaleDateString()}</li>`;
     // }
-        html += `<li>${product.name} was sold by ${employee.name} on ${new Date(
-          order.timestamp
-        ).toLocaleDateString()}</li>`;
+    html += `<li>${product.name} was sold by ${employee.name} on ${new Date(
+      order.timestamp
+    ).toLocaleDateString()}</li>`;
   }
 
   html += "</ul>";
