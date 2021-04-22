@@ -178,7 +178,7 @@ const database = {
     },
     {
       productId: 6,
-      employeeId: 11,
+      employeeId: 10,
       timestamp: 1612238112396,
     },
     {
