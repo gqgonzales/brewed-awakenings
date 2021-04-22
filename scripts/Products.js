@@ -2,23 +2,20 @@ import { getProducts } from "./database.js";
 
 // Viewing Products on Click (adapted from DeShawn Dog Walking)
 
-document.addEventListener(
-    "click",
-    (clickEvent) => {
-        const itemClicked = clickEvent.target
-        if (itemClicked.id.startsWith("walker")) {
-            const [,walkerId] = itemClicked.id.split("--")
-  
-            for (const walker of walkers) {
-                if (walker.id === parseInt(walkerId)) {
-                    window.alert(`${walker.name} costs ${product.price}`)
-                }
-            }
-        }
-    }
-  )
+document.addEventListener("click", (clickEvent) => {
+  const itemClicked = clickEvent.target;
+  if (itemClicked.id.startsWith("product")) {
+    const [, productId] = itemClicked.id.split("--");
 
-  // Original code below
+    for (const product of products) {
+      if (product.id === parseInt(productId)) {
+        window.alert(`${product.name} costs $${product.price}.`);
+      }
+    }
+  }
+});
+
+// Original code below
 
 const products = getProducts();
 
