@@ -39,9 +39,14 @@ export const Orders = () => {
     const employee = findEmployee(order, employees);
     const product = findProduct(order, products);
 
-    html += `<li>${product.name} was sold by ${employee.name} on ${new Date(
-      order.timestamp
-    ).toLocaleDateString()}</li>`;
+    // if (employee !== null && product !== null) {
+    //   html += `<li>${product.name} was sold by ${employee.name} on ${new Date(
+    //     order.timestamp
+    //   ).toLocaleDateString()}</li>`;
+    // }
+        html += `<li>${product.name} was sold by ${employee.name} on ${new Date(
+          order.timestamp
+        ).toLocaleDateString()}</li>`;
   }
 
   html += "</ul>";
